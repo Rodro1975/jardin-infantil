@@ -11,7 +11,7 @@ export default function Home() {
           Fomentamos el aprendizaje y la creatividad en un ambiente seguro y divertido.
         </p>
         <button className="px-6 py-3 bg-pink-500 text-white rounded-lg shadow-md hover:bg-pink-600 transition duration-300">
-          ¡Inscríbete Ahora!
+          Inicia Sesión Ahora!
         </button>
       </div>
       <div className="hidden md:block absolute right-0 top-0 h-full w-full">
@@ -26,5 +26,3 @@ export default function Home() {
     </div>
   );
 }
-
-
