@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;  /* Fondo blanco */
+  --foreground: #171717;  /* Texto negro */
+  --sky-blue: #87CEEB;    /* Azul cielo */
+  --soft-pink: #FFB6C1;   /* Rosita suave */
+  --soft-yellow: #FFFACD; /* Amarillo suave */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--foreground);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--sky-blue); /* Cambiar a azul cielo */
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--soft-pink); /* Cambiar a rosita suave */
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--sky-blue); /* Cambiar a azul cielo */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--soft-yellow); /* Cambiar a amarillo suave al pasar el mouse */
+}
+
+.text-shadow-md {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: var(--foreground);
+  background-color: var(--soft-pink); /* Cambiar a rosita suave */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+button:hover {
+  background-color: var(--sky-blue); /* Cambiar a azul cielo al pasar el mouse */
+}
+
