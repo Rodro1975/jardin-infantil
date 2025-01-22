@@ -59,9 +59,11 @@ const PanelAdmin = () => {
                     <FaFileAlt className="icon mb-3 mx-auto" />
                     <h3 className="text-xl font-bold text-sky-blue mb-2">Generar Reporte</h3>
                     <p className="text-gray-600">Crea un reporte de usuarios o actividades.</p>
-                    <button className="mt-4 px-4 py-2 bg-soft-pink text-white rounded-lg hover:bg-pink-600 transition duration-300">
-                        Generar
-                    </button>
+                    <Link href="/generarReportes">
+                        <button className="mt-4 px-4 py-2 bg-soft-pink text-white rounded-lg hover:bg-pink-600 transition duration-300">
+                            Generar
+                        </button>
+                    </Link>                    
                 </div>
 
                 <div className="bg-white rounded-lg shadow-md p-4 text-center transition-transform transform hover:scale-105">
