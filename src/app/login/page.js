@@ -11,6 +11,7 @@ export default function LoginPage() {
         e.preventDefault();
 
         const redirectUrl = `${getBaseUrl()}dashboard`; // Genera la URL dinámica
+        console.log("Redirect URL:", redirectUrl); // Verifica la URL generada
         const { error } = await supabase.auth.signInWithOtp({
             email,
             options: {
