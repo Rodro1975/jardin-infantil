@@ -2,23 +2,27 @@
 
 import React, { useState } from "react";
 import supabase from "@/utils/supabaseClient";
+import getBaseUrl from "@/utils/getBaseUrl"; // Importa la función
 
 export default function LoginPage() {
     const [email, setEmail] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const redirectUrl = `${getBaseUrl()}dashboard`; // Genera la URL dinámica
         const { error } = await supabase.auth.signInWithOtp({
             email,
             options: {
-                emailRedirectTo: "http://localhost:3000/dashboard",
-            }
+                emailRedirectTo: redirectUrl, // Usa la URL dinámica
+            },
         });
+
         if (error) {
             console.error("Error al enviar el enlace mágico:", error.message);
         } else {
             alert("Se ha enviado un enlace mágico a tu correo."); // Mensaje al usuario
-            setEmail(""); // Limpiar el formulario después de enviar
+            setEmail(""); // Limpia el formulario después de enviar
         }
     };
 
