@@ -2,6 +2,7 @@
 
 import React from "react";
 import { FaUserAlt, FaUserPlus, FaFileAlt, FaSearch, FaSignOutAlt } from "react-icons/fa";
+import Link from "next/link";
 
 const PanelAdmin = () => {
     return (
@@ -22,7 +23,7 @@ const PanelAdmin = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-white rounded-lg shadow-md p-4 text-center transition-transform transform hover:scale-105">
                     <FaUserPlus className="icon mb-3 mx-auto" />
-                    <h3 className="text-xl font-bold text-sky-blue mb-2">Agregar Usuario</h3>
+                    <h3 className="text-xl font-bold text-sky-blue mb-2">Agregar Estudiante</h3>
                     <p className="text-gray-600">Añade un nuevo usuario al sistema.</p>
                     <button className="mt-4 px-4 py-2 bg-soft-pink text-white rounded-lg hover:bg-pink-600 transition duration-300">
                         Agregar
@@ -40,11 +41,13 @@ const PanelAdmin = () => {
 
                 <div className="bg-white rounded-lg shadow-md p-4 text-center transition-transform transform hover:scale-105">
                     <FaUserAlt className="icon mb-3 mx-auto" />
-                    <h3 className="text-xl font-bold text-sky-blue mb-2">Mostrar Usuarios</h3>
+                    <h3 className="text-xl font-bold text-sky-blue mb-2">Mostrar Estudiantes</h3>
                     <p className="text-gray-600">Visualiza la lista de usuarios registrados.</p>
+                    <Link href="/mostrarEstudiantes">
                     <button className="mt-4 px-4 py-2 bg-soft-pink text-white rounded-lg hover:bg-pink-600 transition duration-300">
                         Mostrar
                     </button>
+                </Link>
                 </div>
 
                 <div className="bg-white rounded-lg shadow-md p-4 text-center transition-transform transform hover:scale-105">
