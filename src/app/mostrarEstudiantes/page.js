@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import supabase from "@/utils/supabaseClient";
 import ActualizarEstudiante from "@/components/ActualizarEstudiante";
+import WorkBar from "@/components/WorkBar";
 
 export default function MostrarEstudiantes() {
   const [estudiantes, setEstudiantes] = useState([]);
@@ -46,10 +47,13 @@ export default function MostrarEstudiantes() {
   if (error) return <p>Error: {error}</p>;
 
   return (
+    <div>
+      <WorkBar/>
     <div
       className="flex flex-col items-center bg-blue-50 py-8 min-h-screen"
       style={{ backgroundImage: "url('/kinder2.jpg')", backgroundSize: "cover" }}
     >
+      
       <h1 className="text-3xl font-bold text-blue-700 mb-6">Lista de Estudiantes</h1>
       <div className="overflow-auto w-full max-w-screen-lg shadow-lg rounded-lg bg-white bg-opacity-90">
         <table className="min-w-full text-left text-sm">
@@ -98,7 +102,7 @@ export default function MostrarEstudiantes() {
           </tbody>
         </table>
       </div>
-
+      </div>
       {/* Modal para actualizar estudiante */}
       {isEditing && currentEstudiante && (
         <ActualizarEstudiante
