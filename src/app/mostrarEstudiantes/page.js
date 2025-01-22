@@ -43,9 +43,9 @@ export default function MostrarEstudiantes() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="flex flex-col items-center bg-blue-50 py-8 min-h-screen">
-      <h1 className="text-2xl font-bold text-blue-700 mb-6">Lista de Estudiantes</h1>
-      <div className="overflow-auto w-full max-w-screen-lg shadow-md rounded-lg bg-white">
+    <div className="flex flex-col items-center bg-blue-50 py-8 min-h-screen" style={{ backgroundImage: "url('/kinder2.jpg')", backgroundSize: 'cover' }}>
+      <h1 className="text-3xl font-bold text-blue-700 mb-6">Lista de Estudiantes</h1>
+      <div className="overflow-auto w-full max-w-screen-lg shadow-lg rounded-lg bg-white bg-opacity-90">
         <table className="min-w-full text-left text-sm">
           <thead className="bg-blue-200 text-blue-800">
             <tr>
@@ -60,7 +60,7 @@ export default function MostrarEstudiantes() {
           </thead>
           <tbody>
             {estudiantes.map((estudiante) => (
-              <tr key={estudiante.id} className="even:bg-blue-50">
+              <tr key={estudiante.id} className="even:bg-blue-50 hover:bg-blue-100 transition duration-200">
                 <td className="border px-4 py-2">{estudiante.id}</td>
                 <td className="border px-4 py-2">{estudiante.nombre}</td>
                 <td className="border px-4 py-2">{estudiante.salon}</td>
@@ -88,3 +88,4 @@ export default function MostrarEstudiantes() {
     </div>
   );
 }
+

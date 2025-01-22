@@ -25,9 +25,11 @@ const PanelAdmin = () => {
                     <FaUserPlus className="icon mb-3 mx-auto" />
                     <h3 className="text-xl font-bold text-sky-blue mb-2">Agregar Estudiante</h3>
                     <p className="text-gray-600">Añade un nuevo usuario al sistema.</p>
+                    <Link href="/agregarEstudiantes">
                     <button className="mt-4 px-4 py-2 bg-soft-pink text-white rounded-lg hover:bg-pink-600 transition duration-300">
                         Agregar
                     </button>
+                    </Link>                    
                 </div>
 
                 <div className="bg-white rounded-lg shadow-md p-4 text-center transition-transform transform hover:scale-105">
@@ -47,7 +49,7 @@ const PanelAdmin = () => {
                     <button className="mt-4 px-4 py-2 bg-soft-pink text-white rounded-lg hover:bg-pink-600 transition duration-300">
                         Mostrar
                     </button>
-                </Link>
+                    </Link>
                 </div>
 
                 <div className="bg-white rounded-lg shadow-md p-4 text-center transition-transform transform hover:scale-105">
