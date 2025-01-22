@@ -17,7 +17,7 @@ export default function Home() {
           </button>
         </Link>
       </div>
-      <div className="hidden md:block absolute right-0 top-0 h-full w-full">
+      <div className="absolute right-0 top-0 h-full w-full">
         <Image
           src="/kinder.jpg" // Asegúrate de que esta imagen esté en la carpeta 'public'
           alt="Imagen representativa del jardín de niños"
@@ -29,3 +29,4 @@ export default function Home() {
     </div>
   );
 }
+
