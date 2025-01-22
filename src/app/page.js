@@ -12,18 +12,18 @@ export default function Home() {
           Fomentamos el aprendizaje y la creatividad en un ambiente seguro y divertido.
         </p>
         <Link href="/login">
-    <button className="px-6 py-3 bg-pink-500 text-white rounded-lg shadow-md hover:bg-pink-600 transition duration-300">
-        Inicia Sesión Ahora!
-    </button>
-</Link>
+          <button className="px-6 py-3 bg-pink-500 text-white rounded-lg shadow-md hover:bg-pink-600 transition duration-300">
+            Inicia Sesión Ahora!
+          </button>
+        </Link>
       </div>
       <div className="hidden md:block absolute right-0 top-0 h-full w-full">
         <Image
-          src="/kinder.jpg" // Cambia esto por la ruta a tu imagen
+          src="/kinder.jpg" // Asegúrate de que esta imagen esté en la carpeta 'public'
           alt="Imagen representativa del jardín de niños"
-          layout="fill"
-          objectFit="cover"
-          priority
+          fill // Propiedad moderna para ocupar el contenedor
+          className="object-cover" // Reemplazo de `objectFit`
+          priority // Para asegurar que se cargue inmediatamente
         />
       </div>
     </div>
