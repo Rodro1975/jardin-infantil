@@ -5,11 +5,10 @@ import {
     FaUserAlt,
     FaUserPlus,
     FaFileAlt,
-    FaSearch,
     FaSignOutAlt,
 } from "react-icons/fa";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; // Asegúrate de usar 'next/navigation' en vez de 'next/router'
+import { useRouter } from "next/navigation"; // Asegúrate de usar 'next/navigation'
 import supabase from "@/utils/supabaseClient"; // Verifica que la ruta sea correcta
 
 const PanelAdmin = () => {
@@ -30,18 +29,6 @@ const PanelAdmin = () => {
 
     return (
         <div className="p-6">
-            {/* Barra de búsqueda */}
-            <div className="flex justify-center items-center mb-6">
-                <input
-                    type="text"
-                    placeholder="Buscar por nombre..."
-                    className="w-full max-w-md px-4 py-2 border rounded-l-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-blue"
-                />
-                <button className="bg-soft-pink text-white px-4 py-2 rounded-r-lg hover:bg-pink-600 transition duration-300">
-                    <FaSearch className="icon" />
-                </button>
-            </div>
-
             {/* Panel de administración */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-white rounded-lg shadow-md p-4 text-center transition-transform transform hover:scale-105">
@@ -94,6 +81,7 @@ const PanelAdmin = () => {
 };
 
 export default PanelAdmin;
+
 
 
 

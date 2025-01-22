@@ -35,11 +35,11 @@ export default function DashboardPage() {
                 className="bg-cover bg-center h-48 flex flex-col items-center justify-center" 
                 style={{ backgroundImage: "url('/kinder1.jpg')" }}
             >
-                <h1 className="text-4xl font-bold text-sky-blue">
+                <h1 className="text-4xl font-bold text-blue-500">
                     Jardín Infantil
                 </h1>
                 {userEmail && (
-                    <h2 className="text-2xl text-soft-pink mt-2">
+                    <h2 className="text-2xl text-pink-500 mt-2">
                         Bienvenido, {userEmail}
                     </h2>
                 )}
