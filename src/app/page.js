@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,9 +11,11 @@ export default function Home() {
         <p className="text-lg text-gray-700 mb-6">
           Fomentamos el aprendizaje y la creatividad en un ambiente seguro y divertido.
         </p>
-        <button className="px-6 py-3 bg-pink-500 text-white rounded-lg shadow-md hover:bg-pink-600 transition duration-300">
-          Inicia Sesión Ahora!
-        </button>
+        <Link href="/login">
+    <button className="px-6 py-3 bg-pink-500 text-white rounded-lg shadow-md hover:bg-pink-600 transition duration-300">
+        Inicia Sesión Ahora!
+    </button>
+</Link>
       </div>
       <div className="hidden md:block absolute right-0 top-0 h-full w-full">
         <Image

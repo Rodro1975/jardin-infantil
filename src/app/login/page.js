@@ -10,6 +10,9 @@ export default function LoginPage() {
         e.preventDefault();
         const { error } = await supabase.auth.signInWithOtp({
             email,
+            options: {
+                emailRedirectTo: "http://localhost:3000/dashboard",
+            }
         });
         if (error) {
             console.error("Error al enviar el enlace mágico:", error.message);

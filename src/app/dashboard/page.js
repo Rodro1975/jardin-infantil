@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import supabase from "@/utils/supabaseClient";
+import PanelAdmin from "@/components/PanelAdmin";
 
 export default function DashboardPage() {
     const [userEmail, setUserEmail] = useState("");
@@ -29,24 +30,32 @@ export default function DashboardPage() {
     }, []);
 
     return (
-        <main className="flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-r from-blue-200 to-yellow-100">
-            <header className="text-center">
-                <h1 className="text-4xl text-sky-blue font-bold text-shadow-md">
+        <main className="flex flex-col min-h-screen bg-gradient-to-r from-blue-200 to-yellow-100">
+            <header 
+                className="bg-cover bg-center h-48 flex flex-col items-center justify-center" 
+                style={{ backgroundImage: "url('/kinder1.jpg')" }}
+            >
+                <h1 className="text-4xl font-bold text-sky-blue">
                     Jardín Infantil
                 </h1>
                 {userEmail && (
-                    <h2 className="text-2xl text-soft-pink mt-4">
+                    <h2 className="text-2xl text-soft-pink mt-2">
                         Bienvenido, {userEmail}
                     </h2>
                 )}
+                <p className="text-lg bg-white bg-opacity-80 p-2 rounded mt-2 text-[#171717]">
+                    ¡Gracias por iniciar sesión! Aquí puedes gestionar tu información.
+                </p>
             </header>
-            <p className="mt-8 text-lg text-center">
-                {!error
-                    ? "¡Gracias por iniciar sesión! Aquí puedes gestionar tu información."
-                    : `Error: ${error}`}
-            </p>
+            <section className="flex-grow flex items-center justify-center">
+                {/* Aquí puedes agregar el contenido del panel de trabajo */}
+                <PanelAdmin />
+            </section>
         </main>
     );
 }
+
+
+
 
 

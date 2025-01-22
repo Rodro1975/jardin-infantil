@@ -77,3 +77,12 @@ button:hover {
   background-color: var(--sky-blue); /* Cambiar a azul cielo al pasar el mouse */
 }
 
+.icon {
+  color: var(--sky-blue); /* Azul cielo */
+  font-size: 2rem; /* Tamaño por defecto para los íconos */
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: var(--soft-yellow); /* Amarillo suave al pasar el mouse */
+}
