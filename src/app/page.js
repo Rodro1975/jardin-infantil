@@ -17,16 +17,17 @@ export default function Home() {
           </button>
         </Link>
       </div>
-      <div className="absolute right-0 top-0 h-full w-full">
+      <div className="absolute inset-0 z-0"> 
         <Image
-          src="/kinder.jpg" // Asegúrate de que esta imagen esté en la carpeta 'public'
+          src="/kinder.jpg" 
           alt="Imagen representativa del jardín de niños"
-          fill // Propiedad moderna para ocupar el contenedor
-          className="object-cover" // Reemplazo de `objectFit`
-          priority // Para asegurar que se cargue inmediatamente
+          fill 
+          className="object-cover" 
+          priority 
         />
       </div>
     </div>
   );
 }
+
 
