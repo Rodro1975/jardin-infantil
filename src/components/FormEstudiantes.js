@@ -64,7 +64,7 @@ const FormEstudiantes = () => {
         <section className="min-h-screen p-8 bg-gradient-to-r from-blue-200 to-yellow-100">
         <div className="flex items-center justify-center h-screen ">
             <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl">
-                <h2 className="text-2xl font-bold text-center mb-4 text-sky-blue">
+                <h2 className="text-2xl font-bold text-center mb-4 text-blue-500">
                     Registrar un Estudiante
                 </h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -73,7 +73,7 @@ const FormEstudiantes = () => {
                         <input
                             id="nombre"
                             type="text"
-                            {...register("name")}
+                            {...register("nombre")}
                             className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
                             placeholder="Ingresa el nombre del Estudiante"
                         />

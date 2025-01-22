@@ -2,11 +2,14 @@
 
 import { useEffect, useState } from "react";
 import supabase from "@/utils/supabaseClient";
+import ActualizarEstudiante from "@/components/ActualizarEstudiante";
 
 export default function MostrarEstudiantes() {
   const [estudiantes, setEstudiantes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [currentEstudiante, setCurrentEstudiante] = useState(null);
 
   // Función para obtener los datos de la tabla
   const fetchEstudiantes = async () => {
@@ -43,7 +46,10 @@ export default function MostrarEstudiantes() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="flex flex-col items-center bg-blue-50 py-8 min-h-screen" style={{ backgroundImage: "url('/kinder2.jpg')", backgroundSize: 'cover' }}>
+    <div
+      className="flex flex-col items-center bg-blue-50 py-8 min-h-screen"
+      style={{ backgroundImage: "url('/kinder2.jpg')", backgroundSize: "cover" }}
+    >
       <h1 className="text-3xl font-bold text-blue-700 mb-6">Lista de Estudiantes</h1>
       <div className="overflow-auto w-full max-w-screen-lg shadow-lg rounded-lg bg-white bg-opacity-90">
         <table className="min-w-full text-left text-sm">
@@ -60,7 +66,10 @@ export default function MostrarEstudiantes() {
           </thead>
           <tbody>
             {estudiantes.map((estudiante) => (
-              <tr key={estudiante.id} className="even:bg-blue-50 hover:bg-blue-100 transition duration-200">
+              <tr
+                key={estudiante.id}
+                className="even:bg-blue-50 hover:bg-blue-100 transition duration-200"
+              >
                 <td className="border px-4 py-2">{estudiante.id}</td>
                 <td className="border px-4 py-2">{estudiante.nombre}</td>
                 <td className="border px-4 py-2">{estudiante.salon}</td>
@@ -75,6 +84,10 @@ export default function MostrarEstudiantes() {
                     Eliminar
                   </button>
                   <button
+                    onClick={() => {
+                      setCurrentEstudiante(estudiante);
+                      setIsEditing(true);
+                    }}
                     className="bg-yellow-400 text-white px-4 py-2 rounded hover:bg-yellow-500 transition"
                   >
                     Modificar
@@ -85,7 +98,17 @@ export default function MostrarEstudiantes() {
           </tbody>
         </table>
       </div>
+
+      {/* Modal para actualizar estudiante */}
+      {isEditing && currentEstudiante && (
+        <ActualizarEstudiante
+          estudiante={currentEstudiante}
+          onClose={() => setIsEditing(false)}
+          onUpdate={fetchEstudiantes}
+        />
+      )}
     </div>
   );
 }
+
 
