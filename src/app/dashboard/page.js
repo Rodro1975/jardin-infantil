@@ -48,7 +48,7 @@ export default function DashboardPage() {
                 </p>
             </header>
             <section className="flex-grow flex items-center justify-center">
-                {/* Aquí puedes agregar el contenido del panel de trabajo */}
+                {/* Más componentes del panel de trabajo aqui*/}
                 <PanelAdmin />
             </section>
         </main>

@@ -47,16 +47,16 @@ const FormEstudiantes = () => {
 
         // Enviar los datos a Supabase
         const { data: insertData, error } = await supabase
-            .from("estudiantes") // Asegúrate de que 'estudiantes' sea tu tabla correcta
+            .from("estudiantes") 
             .insert([sanitizedData]);
 
         if (error) {
             console.error("Error al insertar datos:", error);
-            setSuccessMessage(""); // Limpiar mensaje si hay error
+            setSuccessMessage(""); 
         } else {
             console.log("Datos insertados:", insertData);
-            setSuccessMessage("Datos registrados correctamente."); // Mensaje de éxito
-            reset(); // Limpiar el formulario después de enviar
+            setSuccessMessage("Datos registrados correctamente."); 
+            reset(); 
         }
     };
 

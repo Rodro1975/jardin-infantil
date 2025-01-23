@@ -4,7 +4,7 @@ const getBaseUrl = () => {
       process.env.NEXT_PUBLIC_VERCEL_URL || // URL configurada por Vercel.
       "http://localhost:3000"; // URL por defecto en desarrollo.
   
-    // Asegúrate de que tenga `https://` (excepto en localhost).
+    
     url = url.startsWith("http") ? url : `https://${url}`;
   
     // Asegúrate de que termine con `/`.

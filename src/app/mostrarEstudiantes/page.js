@@ -12,7 +12,7 @@ export default function MostrarEstudiantes() {
     const [error, setError] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
     const [currentEstudiante, setCurrentEstudiante] = useState(null);
-    const [searchTerm, setSearchTerm] = useState(""); // Estado para el término de búsqueda
+    const [searchTerm, setSearchTerm] = useState(""); 
 
     // Función para obtener los datos de la tabla
     const fetchEstudiantes = async () => {
@@ -88,6 +88,7 @@ export default function MostrarEstudiantes() {
                         <thead className="bg-blue-200 text-blue-800">
                             <tr>
                                 <th className="border px-4 py-2">Id</th>
+                                <th className="border px-4 py-2">Última modificación</th>
                                 <th className="border px-4 py-2">Nombre</th>
                                 <th className="border px-4 py-2">Salón</th>
                                 <th className="border px-4 py-2">Acudiente</th>
@@ -100,6 +101,7 @@ export default function MostrarEstudiantes() {
                             {filteredEstudiantes.map((estudiante) => (
                                 <tr key={estudiante.id} className="even:bg-blue-50 hover:bg-blue-100 transition duration-200">
                                     <td className="border px-4 py-2">{estudiante.id}</td>
+                                    <td className="border px-4 py-2">{estudiante.modified_at}</td>
                                     <td className="border px-4 py-2">{estudiante.nombre}</td>
                                     <td className="border px-4 py-2">{estudiante.salon}</td>
                                     <td className="border px-4 py-2">{estudiante.acudiente}</td>

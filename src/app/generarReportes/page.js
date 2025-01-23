@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import WorkBar from "@/components/WorkBar";
-import supabase from "@/utils/supabaseClient"; // Asegúrate de que esta ruta sea correcta
+import supabase from "@/utils/supabaseClient";
 import * as XLSX from "xlsx";
 import jsPDF from "jspdf";
 
@@ -40,7 +40,7 @@ export default function GenerarReportes() {
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Estudiantes");
         
-        // Genera el archivo Excel
+        // Genera el archivo Excel y PDF
         XLSX.writeFile(workbook, "Estudiantes.xlsx");
     };
 

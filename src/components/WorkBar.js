@@ -31,7 +31,7 @@ const WorkBar = () => {
 
     return (
         <div className="bg-[#FFFACD] p-4 shadow-md flex justify-between items-center">
-            <h1 className="text-xl font-bold text-blue-500">Jardin Infantil</h1>
+            <h1 className="text-xl font-bold text-blue-500">JardÍn Infantil</h1>
             <button 
                 className="sm:hidden text-blue-500 focus:outline-none" 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}

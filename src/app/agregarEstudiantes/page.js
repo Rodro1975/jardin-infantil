@@ -2,10 +2,10 @@ import FormEstudiantes from "@/components/FormEstudiantes";
 import WorkBar from "@/components/WorkBar";
 
 
-export default function AddComputerPage() {
+export default function agregarEstudiantes() {
     return (
       <main>                
-  {/* Other components or content <RegisterForm /> here! */}
+  {/* Otros componentes o contenido aqui */}
   <WorkBar/>
   <FormEstudiantes/>
   

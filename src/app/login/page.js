@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import supabase from "@/utils/supabaseClient";
-import getBaseUrl from "@/utils/getBaseUrl"; // Importa la función
+import getBaseUrl from "@/utils/getBaseUrl"; // Importa la función para producción o local
 
 export default function LoginPage() {
     const [email, setEmail] = useState("");
@@ -22,8 +22,8 @@ export default function LoginPage() {
         if (error) {
             console.error("Error al enviar el enlace mágico:", error.message);
         } else {
-            alert("Se ha enviado un enlace mágico a tu correo."); // Mensaje al usuario
-            setEmail(""); // Limpia el formulario después de enviar
+            alert("Se ha enviado un enlace mágico a tu correo."); 
+            setEmail(""); 
         }
     };
 

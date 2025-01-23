@@ -8,8 +8,8 @@ import {
     FaSignOutAlt,
 } from "react-icons/fa";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; // Asegúrate de usar 'next/navigation'
-import supabase from "@/utils/supabaseClient"; // Verifica que la ruta sea correcta
+import { useRouter } from "next/navigation"; 
+import supabase from "@/utils/supabaseClient"; 
 
 const PanelAdmin = () => {
     const router = useRouter();

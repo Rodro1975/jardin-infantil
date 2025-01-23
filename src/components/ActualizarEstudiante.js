@@ -104,8 +104,8 @@ const ActualizarEstudiante = ({ estudiante, onClose, onUpdate }) => {
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
             >
               <option value="">Selecciona el Género</option>
-              <option value="femenino">Femenino</option>
-              <option value="masculino">Masculino</option>
+              <option value="FEMENINO">Femenino</option>
+              <option value="MASCULINO">Masculino</option>
             </select>
             {errors.genero && (
               <p className="text-red-500">{errors.genero.message}</p>
